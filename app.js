@@ -1,5 +1,9 @@
-var http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+// initialize our express app
+const app = express();
 
-http.createServer(function (req, res) {
-    res.end('Node! Get Set Go....');
-}).listen(9000);
+let port = 9000;
+app.listen(port, () => {
+    console.log('Server is up and running on port numner ' + port);
+});
